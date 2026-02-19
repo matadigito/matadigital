@@ -9,14 +9,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <!-- Navigation (with mobile menu) -->
   <nav class="navbar">
     <span class="logo">MATA‑DIGITAL</span>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="services.html" onclick="closeMenu()">Services</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
     </div>
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
   </nav>
 
   <section class="page-header">
@@ -256,7 +261,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (updated address) -->
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
@@ -287,7 +292,7 @@
       </div>
       <div class="footer-col">
         <h4>Malawi</h4>
-        <p>Area 47, Lilongwe<br>+265 884 608 790</p>
+        <p>Bunda, Mitundu (Near Bunda College)<br>Lilongwe, Malawi<br>+265 884 608 790</p>
       </div>
     </div>
     <div class="copyright">
@@ -297,7 +302,9 @@
 
   <button id="topBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
+  <!-- Combined scripts -->
   <script>
+    // Back to top button
     const topBtn = document.getElementById('topBtn');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 600 ? 'flex' : 'none';
@@ -305,6 +312,8 @@
     topBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -316,8 +325,43 @@
         }
       });
     });
-  </script>  <!-- Scroll reveal script -->
-  <script>
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    function closeMenu() {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', toggleMenu);
+    }
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+
     // Scroll reveal animation
     function reveal() {
       const reveals = document.querySelectorAll('.reveal');
@@ -333,7 +377,7 @@
     window.addEventListener('scroll', reveal);
     window.addEventListener('load', reveal);
 
-    // Add 'reveal' class to all sections you want to animate
+    // Add 'reveal' class to elements
     document.querySelectorAll('section, .featured-card, .testimonial-card, .stat-item, .why-item, .service-card, .portfolio-card, .pricing-card, .case-card, .team-member, .value-item, .mission, .vision, .timeline-item, .partner-logo, .faq-item').forEach(el => {
       el.classList.add('reveal');
     });
