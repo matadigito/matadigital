@@ -19,6 +19,7 @@
     </div>
   </nav>
 
+  <!-- Page Header -->
   <section class="page-header">
     <div class="container">
       <h1>About MATA‑DIGITAL</h1>
@@ -153,8 +154,65 @@
   </section>
 
   <!-- Footer (same as index) -->
-  <footer>...</footer>
-  <button id="topBtn">...</button>
-  <script>...</script>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="logo" style="color: white; background: none; -webkit-text-fill-color: white;">MATA‑DIGITAL</span>
+        <p>Smart digital solutions for modern businesses.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Malawi</h4>
+        <p>Area 47, Lilongwe<br>+265 884 608 790</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 MATA‑DIGITAL. All rights reserved.
+    </div>
+  </footer>
+
+  <button id="topBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 600 ? 'flex' : 'none';
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || !href) return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
