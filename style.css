@@ -110,22 +110,26 @@ h2 {
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0,60,120,0.1);
+  flex-wrap: nowrap; /* prevent wrapping */
 }
 /* Logo link with image (no text) */
 .logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
+  max-width: 200px; /* prevent oversized logo */
 }
 .logo-img {
-  height: 50px;
+  max-height: 50px;
   width: auto;
+  object-fit: contain;
   display: block;
 }
 .nav-links {
   display: flex;
   gap: 2.5rem;
   font-weight: 500;
+  flex-wrap: wrap; /* allow wrap on small screens if needed, but desktop will stay inline */
 }
 .nav-links a {
   text-decoration: none;
@@ -133,6 +137,7 @@ h2 {
   transition: color 0.2s;
   font-size: 0.95rem;
   position: relative;
+  white-space: nowrap; /* keep link text on one line */
 }
 .nav-links a::after {
   content: '';
@@ -191,6 +196,7 @@ h2 {
   }
   .nav-links a {
     font-size: 1.2rem;
+    white-space: normal; /* allow wrapping in mobile menu */
   }
   .nav-links a::after {
     display: none;
