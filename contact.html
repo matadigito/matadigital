@@ -57,7 +57,7 @@
       <div class="contact-details">
         <div class="detail-line"><i class="fab fa-whatsapp"></i> <span>+265 884 608 790 (WhatsApp / calls)</span></div>
         <div class="detail-line"><i class="far fa-envelope"></i> <span>matadigito@gmail.com</span></div>
-        <div class="detail-line"><i class="fas fa-map-pin"></i> <span>Lilongwe, Malawi</span></div>
+        <div class="detail-line"><i class="fas fa-map-pin"></i> <span>Bunda, Mitundu (Near Bunda College of Agriculture), Lilongwe, Malawi</span></div>
         <div style="margin-top: 2rem;"><i class="fas fa-clock"></i> Mon–Fri 8:00–17:00 CAT</div>
         <div class="social-icons" style="justify-content: flex-start; margin-top: 2rem;">
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -69,13 +69,24 @@
     </div>
   </section>
 
-  <!-- Google Map -->
+  <!-- Local Presence Note (new) -->
+  <section class="section-padding" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-strip" style="margin: 0 0 3rem 0; background: var(--light-bg);">
+        <h3>📍 Located near Bunda College</h3>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">We're right next to the university – ideal for students and researchers needing quick support with digital tools and questionnaires.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map - Bunda, Mitundu -->
   <section class="section-padding" style="padding-top: 0;">
     <div class="container">
       <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123456!2d33.787!3d-13.983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDU5JzAwLjAiUyAzM8KwNDcnMjAuMCJF!5e0!3m2!1sen!2smw!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Precise coordinates for Bunda College area: -14.184, 33.785 -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.405638117919!2d33.782775!3d-14.184000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921c8e5b3b5b5b5%3A0x7b7b7b7b7b7b7b7b!2sBunda%20College%20of%20Agriculture%2C%20Lilongwe!5e0!3m2!1sen!2smw!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
       </div>
-      <p style="text-align: center; color: var(--text-muted);">Visit us in Lilongwe, Area 47 (by appointment)</p>
+      <p style="text-align: center; color: var(--text-muted);">Visit us in Bunda, Mitundu – just near Bunda College of Agriculture. (By appointment)</p>
     </div>
   </section>
 
@@ -110,7 +121,7 @@
       </div>
       <div class="footer-col">
         <h4>Malawi</h4>
-        <p>Area 47, Lilongwe<br>+265 884 608 790</p>
+        <p>Bunda, Mitundu (Near Bunda College)<br>Lilongwe, Malawi<br>+265 884 608 790</p>
       </div>
     </div>
     <div class="copyright">
@@ -139,9 +150,9 @@
         }
       });
     });
-  </script>  <!-- Scroll reveal script -->
+  </script>
+  <!-- Scroll reveal script -->
   <script>
-    // Scroll reveal animation
     function reveal() {
       const reveals = document.querySelectorAll('.reveal');
       for (let i = 0; i < reveals.length; i++) {
@@ -156,7 +167,6 @@
     window.addEventListener('scroll', reveal);
     window.addEventListener('load', reveal);
 
-    // Add 'reveal' class to all sections you want to animate
     document.querySelectorAll('section, .featured-card, .testimonial-card, .stat-item, .why-item, .service-card, .portfolio-card, .pricing-card, .case-card, .team-member, .value-item, .mission, .vision, .timeline-item, .partner-logo, .faq-item').forEach(el => {
       el.classList.add('reveal');
     });
