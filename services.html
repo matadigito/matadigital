@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation (with mobile menu) -->
   <nav class="navbar">
-    <span class="logo">MATA‑DIGITAL</span>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="MATA‑DIGITAL">
+    </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
       <i class="fas fa-bars"></i>
     </button>
@@ -145,7 +146,7 @@
     </div>
   </section>
 
-  <!-- Pricing Packages for Questionnaire Tools (id="packages") -->
+  <!-- Pricing Packages for Questionnaire Tools -->
   <section class="section-padding" id="packages">
     <div class="container">
       <h2>Academic Packages for Researchers</h2>
@@ -240,7 +241,7 @@
     </div>
   </section>
 
-  <!-- Portfolio (repeated for convenience) -->
+  <!-- Portfolio -->
   <section class="section-padding" id="portfolio">
     <div class="container">
       <h2>Featured Projects</h2>
@@ -261,11 +262,11 @@
     </div>
   </section>
 
-  <!-- Footer (updated address) -->
+  <!-- Footer -->
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
-        <span class="logo" style="color: white; background: none; -webkit-text-fill-color: white;">MATA‑DIGITAL</span>
+        <img src="images/logo.png" alt="MATA‑DIGITAL" style="height: 50px; margin-bottom: 1rem;">
         <p>Smart digital solutions for modern businesses.</p>
         <div class="social-icons">
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -302,9 +303,8 @@
 
   <button id="topBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-  <!-- Combined scripts -->
+  <!-- Combined scripts (same as index) -->
   <script>
-    // Back to top button
     const topBtn = document.getElementById('topBtn');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 600 ? 'flex' : 'none';
@@ -313,7 +313,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -326,7 +325,6 @@
       });
     });
 
-    // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const menuOverlay = document.getElementById('menuOverlay');
@@ -362,7 +360,6 @@
       }
     });
 
-    // Scroll reveal animation
     function reveal() {
       const reveals = document.querySelectorAll('.reveal');
       for (let i = 0; i < reveals.length; i++) {
@@ -377,7 +374,6 @@
     window.addEventListener('scroll', reveal);
     window.addEventListener('load', reveal);
 
-    // Add 'reveal' class to elements
     document.querySelectorAll('section, .featured-card, .testimonial-card, .stat-item, .why-item, .service-card, .portfolio-card, .pricing-card, .case-card, .team-member, .value-item, .mission, .vision, .timeline-item, .partner-logo, .faq-item').forEach(el => {
       el.classList.add('reveal');
     });
