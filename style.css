@@ -110,26 +110,22 @@ h2 {
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0,60,120,0.1);
-  flex-wrap: nowrap; /* prevent wrapping */
 }
-/* Logo link with image (no text) */
 .logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  max-width: 200px; /* prevent oversized logo */
 }
 .logo-img {
   max-height: 50px;
   width: auto;
-  object-fit: contain;
   display: block;
 }
+/* Desktop navigation */
 .nav-links {
   display: flex;
   gap: 2.5rem;
   font-weight: 500;
-  flex-wrap: wrap; /* allow wrap on small screens if needed, but desktop will stay inline */
 }
 .nav-links a {
   text-decoration: none;
@@ -137,7 +133,7 @@ h2 {
   transition: color 0.2s;
   font-size: 0.95rem;
   position: relative;
-  white-space: nowrap; /* keep link text on one line */
+  white-space: nowrap;
 }
 .nav-links a::after {
   content: '';
@@ -155,16 +151,7 @@ h2 {
 .nav-links a:hover::after {
   width: 100%;
 }
-/* Hide nav-links and show toggle on mobile by default */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-/* ========== MOBILE NAVIGATION ========== */
+/* Menu toggle button (hidden on desktop) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -174,9 +161,13 @@ h2 {
   cursor: pointer;
   z-index: 1001;
 }
+/* Mobile styles */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
   .nav-links {
-    display: flex; /* override the previous display:none */
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -196,7 +187,7 @@ h2 {
   }
   .nav-links a {
     font-size: 1.2rem;
-    white-space: normal; /* allow wrapping in mobile menu */
+    white-space: normal;
   }
   .nav-links a::after {
     display: none;
@@ -668,7 +659,7 @@ footer {
   transform: scale(1.1) translateY(-5px);
   background: var(--primary);
 }
-/* ========== NEW SECTION STYLES (additions) ========== */
+/* ========== NEW SECTION STYLES ========== */
 .client-logos {
   display: flex;
   gap: 3rem;
