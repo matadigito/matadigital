@@ -11,11 +11,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation with logo and text -->
+  <!-- Navigation with Logo Image and Mobile Toggle -->
   <nav class="navbar">
     <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="MATA‑DIGITAL" class="logo-img">
-      <span class="logo-text">MATA‑DIGITAL</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
       <i class="fas fa-bars"></i>
@@ -37,6 +36,22 @@
       <div class="hero-buttons">
         <a href="contact.html" class="btn btn-primary">Get a Quote</a>
         <a href="services.html" class="btn btn-outline">View Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section with Logo and Sweet Message -->
+  <section class="section-padding" style="background: var(--light-bg);">
+    <div class="container" style="display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 200px; text-align: center;">
+        <img src="images/logo.png" alt="MATA‑DIGITAL" style="max-width: 200px; height: auto;">
+      </div>
+      <div style="flex: 2;">
+        <h2 style="color: var(--primary);">Let's Create Something Amazing Together</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6;">Partnering with MATA‑DIGITAL means more than just getting a service – it means gaining a dedicated team that cares about your success. We blend creativity, technology, and strategy to turn your vision into reality. Whether you're a startup, a researcher, or an established enterprise, we're here to make your digital journey smooth, impactful, and enjoyable.</p>
+        <div style="margin-top: 2rem;">
+          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+        </div>
       </div>
     </div>
   </section>
@@ -238,9 +253,8 @@
 
   <button id="topBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-  <!-- Combined scripts -->
+  <!-- Combined scripts (including mobile menu) -->
   <script>
-    // Back to top
     const topBtn = document.getElementById('topBtn');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 600 ? 'flex' : 'none';
@@ -249,7 +263,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -262,7 +275,7 @@
       });
     });
 
-    // Mobile menu
+    // Mobile menu functionality
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const menuOverlay = document.getElementById('menuOverlay');
