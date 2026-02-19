@@ -55,7 +55,7 @@
     </div>
   </section>
 
-  <!-- Featured Services (Snapshot) -->
+  <!-- Featured Services -->
   <section class="section-padding">
     <div class="container">
       <h2>Our Core Expertise</h2>
@@ -125,7 +125,7 @@
     </div>
   </section>
 
-  <!-- Stats / Impact Numbers -->
+  <!-- Stats -->
   <section class="section-padding">
     <div class="container">
       <div class="stats-grid">
@@ -149,7 +149,7 @@
     </div>
   </section>
 
-  <!-- Why Choose Us Snapshot -->
+  <!-- Why Choose Us -->
   <section class="section-padding" style="background: var(--light-bg);">
     <div class="container">
       <h2>Why Partner With Us?</h2>
@@ -165,7 +165,7 @@
     </div>
   </section>
 
-  <!-- Portfolio Snapshot -->
+  <!-- Portfolio -->
   <section class="section-padding">
     <div class="container">
       <h2>Recent Work</h2>
@@ -240,6 +240,7 @@
 
   <!-- Combined scripts -->
   <script>
+    // Back to top
     const topBtn = document.getElementById('topBtn');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 600 ? 'flex' : 'none';
@@ -248,6 +249,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -260,6 +262,7 @@
       });
     });
 
+    // Mobile menu
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const menuOverlay = document.getElementById('menuOverlay');
@@ -295,6 +298,7 @@
       }
     });
 
+    // Scroll reveal
     function reveal() {
       const reveals = document.querySelectorAll('.reveal');
       for (let i = 0; i < reveals.length; i++) {
