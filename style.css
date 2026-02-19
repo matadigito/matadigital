@@ -8,11 +8,11 @@
   --primary: #0B5FA5;
   --secondary: #1C7ED6;
   --dark-overlay: rgba(10, 25, 47, 0.85);
-  --light-bg: #e8f0fe;        /* more blueish light background */
+  --light-bg: #e8f0fe;
   --white: #ffffff;
-  --grey-light: #d9e6f2;      /* slightly blue grey */
+  --grey-light: #d9e6f2;
   --text-dark: #1a2b3e;
-  --text-muted: #2c3e5c;       /* darker for contrast on light blue */
+  --text-muted: #2c3e5c;
   --gradient-blue: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   --shadow-sm: 0 10px 25px -5px rgba(10, 25, 47, 0.15), 0 8px 10px -6px rgba(10,25,47,0.05);
   --shadow-hover: 0 25px 40px -12px rgba(11, 95, 165, 0.35);
@@ -24,7 +24,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-dark);
-  background: var(--light-bg); /* overall light blue background */
+  background: var(--light-bg);
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -36,7 +36,6 @@ body {
 .section-padding {
   padding: 5.5rem 0;
 }
-/* all sections get a white card with subtle blue shadow for depth */
 section:not(.hero):not(.page-header):not(.cta-section):not(.cta-strip) {
   background: var(--white);
   border-radius: 3rem;
@@ -86,7 +85,7 @@ section:not(.hero):not(.page-header):not(.cta-section):not(.cta-strip) .containe
 h1, h2, h3 {
   font-weight: 700;
   line-height: 1.2;
-  color: var(--primary); /* headings blue */
+  color: var(--primary);
 }
 h2 {
   font-size: 2.5rem;
@@ -202,7 +201,7 @@ h2 {
 /* ========== HERO SECTION ========== */
 .hero {
   background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
-              url('../images/background.png') center/cover no-repeat;
+              url('images/background.png') center/cover no-repeat;
   min-height: 85vh;
   display: flex;
   align-items: center;
@@ -247,7 +246,7 @@ h2 {
 /* ========== PAGE HEADER ========== */
 .page-header {
   background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
-              url('../images/background.png') center/cover no-repeat;
+              url('images/background.png') center/cover no-repeat;
   padding: 6rem 0;
   color: white;
   text-align: center;
@@ -652,7 +651,7 @@ footer {
   transform: scale(1.1) translateY(-5px);
   background: var(--primary);
 }
-/* ========== NEW SECTION STYLES (from additions) ========== */
+/* ========== NEW SECTION STYLES (additions) ========== */
 .client-logos {
   display: flex;
   gap: 3rem;
