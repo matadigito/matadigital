@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation with logo -->
+  <!-- Navigation with Logo Image and Mobile Toggle -->
   <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="MATA‑DIGITAL">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="MATA‑DIGITAL" class="logo-img" style="max-height: 50px; width: auto;">
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
       <i class="fas fa-bars"></i>
@@ -223,6 +223,7 @@
       });
     });
 
+    // Mobile menu functionality
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const menuOverlay = document.getElementById('menuOverlay');
@@ -258,6 +259,7 @@
       }
     });
 
+    // Scroll reveal
     function reveal() {
       const reveals = document.querySelectorAll('.reveal');
       for (let i = 0; i < reveals.length; i++) {
