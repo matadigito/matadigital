@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATA‑DIGITAL – Smart Digital Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation (same on all pages) -->
+  <nav class="navbar">
+    <span class="logo">MATA‑DIGITAL</span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>We Build Powerful Digital Presence For Your Business</h1>
+      <p>At MATA‑DIGITAL, we help brands grow, connect, and dominate the digital space.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        <a href="services.html" class="btn btn-outline">View Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brief About / Highlights -->
+  <section class="section-padding">
+    <div class="container">
+      <h2>Innovation · Strategy · Results</h2>
+      <p class="section-subhead">We combine creativity, data, and technology to deliver measurable growth.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2rem; margin-top: 2rem;">
+        <div class="highlight-card"><i class="fas fa-rocket"></i><h3>Fast Execution</h3><p>Agile teams, rapid deployment</p></div>
+        <div class="highlight-card"><i class="fas fa-chart-line"></i><h3>Data Driven</h3><p>Every decision backed by analytics</p></div>
+        <div class="highlight-card"><i class="fas fa-users"></i><h3>Client First</h3><p>Your success is our mission</p></div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="about.html" class="btn btn-primary">Learn more about us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Elevate Your Business Digitally?</h2>
+      <a href="contact.html" class="cta-btn">Contact Us Today</a>
+    </div>
+  </section>
+
+  <!-- Footer (same on all pages) -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="logo" style="color: white; background: none; -webkit-text-fill-color: white;">MATA‑DIGITAL</span>
+        <p>Smart digital solutions for modern businesses.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Malawi</h4>
+        <p>Area 47, Lilongwe<br>+265 884 608 790</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 MATA‑DIGITAL. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="topBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Scroll to top button
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 600 ? 'flex' : 'none';
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
