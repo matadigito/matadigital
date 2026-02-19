@@ -316,6 +316,27 @@
         }
       });
     });
+  </script>  <!-- Scroll reveal script -->
+  <script>
+    // Scroll reveal animation
+    function reveal() {
+      const reveals = document.querySelectorAll('.reveal');
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+
+    // Add 'reveal' class to all sections you want to animate
+    document.querySelectorAll('section, .featured-card, .testimonial-card, .stat-item, .why-item, .service-card, .portfolio-card, .pricing-card, .case-card, .team-member, .value-item, .mission, .vision, .timeline-item, .partner-logo, .faq-item').forEach(el => {
+      el.classList.add('reveal');
+    });
   </script>
 </body>
 </html>
